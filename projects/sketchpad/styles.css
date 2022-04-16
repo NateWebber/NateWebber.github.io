@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#TitleContainer {
+    margin: 16px 0px;
+}
+
+#GridButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#ResetButton, #DimensionButton {
+    height: 60px;
+    width: 96px;
+    
+}
+
+#ResetButton{
+    font-size: 24px;
+}
+
+#DimensionButton{
+    font-size: 16px;
+}
+
+#GridContainer {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    height: 720px;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+#ButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.grid-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    height: 100%;
+}
+
+.grid-square {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px;
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+    padding: 16px;
+}

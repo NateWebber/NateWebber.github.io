@@ -21,7 +21,7 @@
 title: NateWebber.dev
 #email: your-email@example.com
 description: # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "natewebber.dev" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
@@ -30,6 +30,10 @@ url: "natewebber.dev" # the base hostname & protocol for your site, e.g. http://
 theme: minima
 plugins:
   - jekyll-feed
+
+collections:
+  projects:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.

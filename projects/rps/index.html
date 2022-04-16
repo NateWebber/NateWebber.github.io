@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="body-container">
+        <div class="navbar">
+            <a id="TitleLink" class="navbar-link" href="/">NateWebber.dev</a>
+            <a class="navbar-link" href="/">Home</a>
+            <a class="navbar-link" href="/blog">Blog</a>
+            <a class="navbar-link" href="/projects">Projects</a>
+            <a class="navbar-link" href="http://github.com/NateWebber">Github</a>
+            <a class="navbar-link" href="http://linkedin.com/in/nathaniel-webber">LinkedIn</a>
+            <a class="navbar-link" href="https://nuz-dev.itch.io/">itch.io</a>
+        </div>
+        <div class="title-bar">
+            <h1 id="RPSTitle">Rock Paper Scissors</h1>
+            <h2 id="RPSSubtitle">Play against the computer! First to five wins.</h2>
+        </div>
+
+        <div id="ScoreDisplay">
+            <div><span>YOU</span> - <span>CPU</span></div>
+        </div>
+
+        <div class="score-number-container">
+            <h1 id="ScoreNumbers">0 - 0</h1>
+        </div>
+
+        <h1 id="ResultsText">null</h1>
+
+        <div class="buttons-container">
+            <button class="game-button" id="RockButton">Rock</button>
+            <button class="game-button" id="PaperButton">Paper</button>
+            <button class="game-button" id="ScissorsButton">Scissors</button>
+        </div>
+
+        <button id="ResetButton">Reset</button>
+    </div>
+    <div class="footer">
+        <h3>Small Browser-Based RPS game, built as an assignment for The Odin Project</h3>
+        <h4><a href="http://theodinproject.com">theodinproject.com</a></h4>
+    </div>
+
+</body>
+
+</html>

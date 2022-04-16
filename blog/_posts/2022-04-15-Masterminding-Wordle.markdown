@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 ## Introduction
 &emsp; On New Year’s Eve of 2021, my girlfriend and I were
 looking through her cabinet of board games, when we found a
