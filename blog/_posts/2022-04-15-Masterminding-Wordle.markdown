@@ -162,6 +162,8 @@ quickly revised my filtering system, and now it was throwing away, in some cases
 thousands more words each time. This was a massive improvement, easily the most impactful
 of the three I’m talking about here.
 
+&emsp; The short version of the reasoning and mechanics for the new system are as follows. Firstly (and obviously), if we ever get a green letter, we can throw away all the words that do not have that exact letter in that exact position. This is a particularly powerful tool if we happen to find an unusual letter (e.g. J, X), as it eliminates a massive amount of possibilities, but any reduction counts! Next, we can think about gray letters. Unfortunately we can't just eliminate all words that have a given gray letter in them (for example, if you guessed "TREES" and got a gray letter on the second E, there may still be a single E in the first word), but what you can do is maintain a "wrongSet" of definitely wrong letters for each position, and filter based on that. (e.g. if you guess "BREAD" and get a gray E, then any word with E in the third spot is definitely wrong and can be filtered). Finally, for yellows, I keep what are referred to as "maybeSets". If we see a yellow letter, than for every position other than where we found it (since we know the letter doesn't go there), if the letter isn't already in the "wrongSet" then we move it to the "maybeSet". Then, if we see a possible word that doesn't have any of the letters in the "maybeSets" ***at all***, then we can safely remove it, since we know those letters must be present somewhere in the word. 
+
 # Scoring Letters
 &emsp; The last improvement I made that I want to mention was a system for scoring letters. I
 didn’t like how, during the initial non-minimax filtering, I was just choosing a next guess at
@@ -173,6 +175,8 @@ would have something like “-READ”. A human being would likely guess “BREAD
 that’s probably the most common word, but my program would be equally likely to try “TREAD”
 or “DREAD”, because it didn’t have that human intuition. In some particularly bad cases it would
 burn up 3 or 4 guesses in this manner by trying very obscure words.
+
+
 &emsp; I was stumped for a little while, but then I had an idea. In Scrabble, letters are given
 individual scores that are loosely based on how commonly they appear in English words. There
 are low scoring, common letters like ‘E’, and higher scoring, rarer letters like ‘X’ and ‘J’. I
